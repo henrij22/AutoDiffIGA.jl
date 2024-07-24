@@ -1,6 +1,6 @@
-using THBSplines
+using AutoDiffIGA
 using Test
 
-@testset "THBSplines.jl" begin
+@testset "AutoDiffIGA.jl" begin
     # Write your tests here.
 end
