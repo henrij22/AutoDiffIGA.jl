@@ -1,7 +1,5 @@
 module AutoDiffIGA
 
-__precompile__(false)
-
 using ForwardDiff
 using NURBS
 using StatsBase
@@ -17,5 +15,14 @@ include("basis/bspline.jl")
 include("basis/tensorbspline.jl")
 
 export BSplineBasis, BSplineTensorBasis2d
+
+include("autodiff/bernoulli.jl")
+include("autodiff/linearElastic.jl")
+include("autodiff/timoshenko.jl")
+
+include("autodiff/quadrature.jl")
+
+export LinearElastic, TimoshenkoBeam, BernoulliBeam
+export computeK, computeF
 
 end

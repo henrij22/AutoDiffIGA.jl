@@ -83,20 +83,3 @@ function eval(basis::BSplineBasis, coefficients, u, nbasisFun)
 
     result
 end
-
-# include("../geometry/geometryhelper1d.jl")
-
-# underlyingBasis, _ = makeGeometry(2, 0, 1.0)
-# basis = BSplineBasis(underlyingBasis)
-
-# coeff = [0.0, 0.3, 0.2]
-
-# @btime eval(basis, coeff, 0.3)
-
-# function generateBasis(basis, n)
-#     [(ξ) -> evalNaive(basis, i, ξ) for i in 1:n]
-# end
-
-# N = generateBasis(underlyingBasis, numBasisFunctions(underlyingBasis))
-# u(ξ) = dot([N[j](ξ) for j in 1:numBasisFunctions(underlyingBasis)], coeff)
-# u(0.3)
