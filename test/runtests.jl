@@ -1,6 +1,7 @@
 using AutoDiffIGA
 using Test
+using Logging
 
 @testset "AutoDiffIGA.jl" begin
-    # Write your tests here.
+    include("test_basis.jl")
 end
